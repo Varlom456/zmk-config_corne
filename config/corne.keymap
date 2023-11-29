@@ -11,31 +11,12 @@
 
 / {
         mscros {
-                ZMK_MACRO(goto_workspace_1,
-                        wait-ms = <0>;
-                        tap-ms = <20>;
+                goto_workspace_1: goto_workspace_1 {
+                        label = "goto_workspace_1";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
                         bindings = <&kp LALT &kp N1>;
-                );
-                ZMK_MACRO(goto_workspace_2,
-                        wait-ms = <0>;
-                        tap-ms = <20>;
-                        bindings = <&kp LALT &kp N2>;
-                );
-                ZMK_MACRO(goto_workspace_3,
-                        wait-ms = <0>;
-                        tap-ms = <20>;
-                        bindings = <&kp LALT &kp N3>;
-                );
-                ZMK_MACRO(goto_workspace_4,
-                        wait-ms = <0>;
-                        tap-ms = <20>;
-                        bindings = <&kp LALT &kp N4>;
-                );
-                ZMK_MACRO(goto_workspace_5,
-                        wait-ms = <0>;
-                        tap-ms = <20>;
-                        bindings = <&kp LALT &kp N5>;
-                );
+                };
         };
         keymap {
                 compatible = "zmk,keymap";
@@ -69,7 +50,7 @@
                 another_layer {
                         bindings = <
    &trans &trans &trans &trans &trans &trans   &trans   &trans   &trans &trans    &trans  &trans
-   &trans &goto_workspace_1 &goto_workspace_2 &goto_workspace_3 &goto_workspace_4 &goto_workspace_5   &trans   &trans   &trans &trans    &trans  &trans
+   &trans &goto_workspace_1 &trans &trans &trans &trans   &trans   &trans   &trans &trans    &trans  &trans
    &trans &trans &trans &trans &trans &trans   &trans   &trans   &trans &trans    &trans  &trans
                 &trans       &trans       &trans         &trans   &trans   &trans
                         >;
