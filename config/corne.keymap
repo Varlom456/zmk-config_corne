@@ -17,6 +17,30 @@
                         #binding-cells = <0>;
                         bindings = <&kp LALT &kp N1>;
                 };
+                goto_workspace_2: goto_workspace_2 {
+                        label = "goto_workspace_2";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&kp LALT &kp N1>;
+                };
+                goto_workspace_3: goto_workspace_3 {
+                        label = "goto_workspace_3";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&kp LALT &kp N1>;
+                };
+                goto_workspace_4: goto_workspace_4 {
+                        label = "goto_workspace_4";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&kp LALT &kp N1>;
+                };
+                goto_workspace_5: goto_workspace_5 {
+                        label = "goto_workspace_5";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <1>;
+                        bindings = <&kp LALT &kp N1>;
+                };
         };
         keymap {
                 compatible = "zmk,keymap";
@@ -50,7 +74,7 @@
                 another_layer {
                         bindings = <
    &trans &trans &trans &trans &trans &trans   &trans   &trans   &trans &trans    &trans  &trans
-   &trans &goto_workspace_1 &trans &trans &trans &trans   &trans   &trans   &trans &trans    &trans  &trans
+   &trans &goto_workspace_1 &goto_workspace_2 &goto_workspace_3 &goto_workspace_4 &goto_workspace_5 &trans   &trans   &trans &trans    &trans  &trans
    &trans &trans &trans &trans &trans &trans   &trans   &trans   &trans &trans    &trans  &trans
                 &trans       &trans       &trans         &trans   &trans   &trans
                         >;
