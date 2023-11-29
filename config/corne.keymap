@@ -15,31 +15,41 @@
                         label = "goto_workspace_1";
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&kp LALT &kp N1>;
+                        bindings = <&macro_press &kp LALT>,
+                                   <&kp N1>,
+                                   <&macro_release &kp LALT>;
                 };
                 goto_workspace_2: goto_workspace_2 {
                         label = "goto_workspace_2";
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&kp LALT &kp N2>;
+                        bindings = <&macro_press &kp LALT>,
+                                   <&kp N2>,
+                                   <&macro_release &kp LALT>;
                 };
                 goto_workspace_3: goto_workspace_3 {
                         label = "goto_workspace_3";
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&kp LALT &kp N3>;
+                        bindings = <&macro_press &kp LALT>,
+                                   <&kp N3>,
+                                   <&macro_release &kp LALT>;
                 };
                 goto_workspace_4: goto_workspace_4 {
                         label = "goto_workspace_4";
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&kp LALT &kp N4>;
+                        bindings = <&macro_press &kp LALT>,
+                                   <&kp N4>,
+                                   <&macro_release &kp LALT>;
                 };
                 goto_workspace_5: goto_workspace_5 {
                         label = "goto_workspace_5";
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&kp LALT &kp N5>;
+                        bindings = <&macro_press &kp LALT>,
+                                   <&kp N5>,
+                                   <&macro_release &kp LALT>;
                 };
         };
         keymap {
