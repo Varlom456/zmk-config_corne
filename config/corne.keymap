@@ -15,11 +15,6 @@
     flavor = "balanced";
 };
 
-&lt {
-    tapping-term-ms = <175>;
-    flavor = "balanced";
-};
-
 / {
     mscros {
         screenshot: screenshot {
