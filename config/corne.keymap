@@ -11,6 +11,16 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+&lt {
+    tapping-term-ms = <150>;
+    quick-tap-ms = <0>;
+};
+
+&mt {
+    tapping-term-ms = <150>;
+    quick-tap-ms = <0>;
+};
+
 / {
     mscros {
         screenshot: screenshot {
@@ -31,16 +41,6 @@
     };
 
     behaviors {
-        layerHoldTap: layerHoldTap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYERHOLDTAP";
-            bindings = <&lt>, <&kp>;
-
-            #binding-cells = <2>;
-            quick-tap-ms = <0>;
-            require-prior-idle-ms = <0>;
-            tapping-term-ms = <0>;
-        };
     };
 
     keymap {
@@ -48,10 +48,10 @@
 
         default_layer {
             bindings = <
-&mt LCMD RIGHT_BRACKET  &kp Q  &kp W  &kp E      &kp R               &kp T                    &kp Y                  &kp U           &kp I      &kp O    &kp P     &mt RGUI LEFT_BRACKET
-&mt LCTRL GRAVE         &kp A  &kp S  &kp D      &kp F               &kp G                    &kp H                  &kp J           &kp K      &kp L    &kp SEMI  &mt RCTRL SQT
-&mt LEFT_ALT MINUS      &kp Z  &kp X  &kp C      &kp V               &kp B                    &kp N                  &kp M           &kp COMMA  &kp DOT  &kp FSLH  &mt RIGHT_ALT BSLH
-                                      &lt 2 TAB  &mt LEFT_SHIFT ESC  &layerHoldTap 1 SPACE    &layerHoldTap 1 SPACE  &mt RSHFT BSPC  &lt 2 DEL
+&mt LCMD RIGHT_BRACKET  &kp Q  &kp W  &kp E      &kp R               &kp T          &kp Y        &kp U           &kp I      &kp O    &kp P     &mt RGUI LEFT_BRACKET
+&mt LCTRL GRAVE         &kp A  &kp S  &kp D      &kp F               &kp G          &kp H        &kp J           &kp K      &kp L    &kp SEMI  &mt RCTRL SQT
+&mt LEFT_ALT MINUS      &kp Z  &kp X  &kp C      &kp V               &kp B          &kp N        &kp M           &kp COMMA  &kp DOT  &kp FSLH  &mt RIGHT_ALT BSLH
+                                      &lt 2 TAB  &mt LEFT_SHIFT ESC  &lt 1 SPACE    &lt 1 ENTER  &mt RSHFT BSPC  &lt 2 DEL
             >;
         };
 
