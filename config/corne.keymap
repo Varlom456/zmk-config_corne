@@ -12,12 +12,12 @@
 #include <dt-bindings/zmk/keys.h>
 
 &lt {
-    tapping-term-ms = <150>;
+    tapping-term-ms = <160>;
     quick-tap-ms = <0>;
 };
 
 &mt {
-    tapping-term-ms = <150>;
+    tapping-term-ms = <160>;
     quick-tap-ms = <0>;
 };
 
@@ -41,18 +41,40 @@
     };
 
     behaviors {
-        space: space {
+        spaceTD: spaceTD+lt1 {
             compatible = "zmk,behavior-tap-dance";
-            label = "SPACE";
-            #binding-cells = <0>;
-            bindings = <&lt 1 SPACE>, <&key_repeat>;
-        };
-
-        spacewww: spacewww {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SPACEWWW";
+            label = "SPACETD";
             #binding-cells = <0>;
             bindings = <&lt 1 SPACE>, <&kp SPACE>;
+
+            tapping-term-ms = <160>;
+        };
+
+        enterTD: enterTD+lt {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ENTERTD";
+            #binding-cells = <0>;
+            bindings = <&lt 1 ENTER>, <&none>;
+
+            tapping-term-ms = <160>;
+        };
+
+        BspcTD: BspcTD+shft {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BSPCTD";
+            #binding-cells = <0>;
+            bindings = <&mt RIGHT_SHIFT BACKSPACE>, <&kp BACKSPACE>;
+
+            tapping-term-ms = <160>;
+        };
+
+        delTD: delTD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DELTD";
+            #binding-cells = <0>;
+            bindings = <&lt 2 DELETE>, <&kp DEL>;
+
+            tapping-term-ms = <160>;
         };
     };
 
@@ -61,10 +83,10 @@
 
         default_layer {
             bindings = <
-&mt LCMD RIGHT_BRACKET  &kp Q  &kp W  &kp E      &kp R               &kp T        &kp Y        &kp U           &kp I      &kp O    &kp P     &mt RGUI LEFT_BRACKET
-&mt LCTRL GRAVE         &kp A  &kp S  &kp D      &kp F               &kp G        &kp H        &kp J           &kp K      &kp L    &kp SEMI  &mt RCTRL SQT
-&mt LEFT_ALT MINUS      &kp Z  &kp X  &kp C      &kp V               &space       &kp N        &kp M           &kp COMMA  &kp DOT  &kp FSLH  &mt RIGHT_ALT BSLH
-                                      &lt 2 TAB  &mt LEFT_SHIFT ESC  &spacewww    &lt 1 ENTER  &mt RSHFT BSPC  &lt 2 DEL
+&mt LCMD RIGHT_BRACKET  &kp Q  &kp W  &kp E      &kp R               &kp T       &kp Y     &kp U    &kp I      &kp O    &kp P     &mt RGUI LEFT_BRACKET
+&mt LCTRL GRAVE         &kp A  &kp S  &kp D      &kp F               &kp G       &kp H     &kp J    &kp K      &kp L    &kp SEMI  &mt RCTRL SQT
+&mt LEFT_ALT MINUS      &kp Z  &kp X  &kp C      &kp V               &kp B       &kp N     &kp M    &kp COMMA  &kp DOT  &kp FSLH  &mt RIGHT_ALT BSLH
+                                      &lt 2 TAB  &mt LEFT_SHIFT ESC  &spaceTD    &enterTD  &BspcTD  &delTD
             >;
         };
 
