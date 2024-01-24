@@ -11,14 +11,9 @@
 &mt {
     tapping-term-ms = <175>;
     bindings = <&kp>, <&kp>;
-
-    quick-tap-ms = <0.1>;
 };
 
-&lt {
-    tapping-term-ms = <175>;
-    quick-tap-ms = <0>;
-};
+&lt { tapping-term-ms = <175>; };
 
 / {
     mscros {
