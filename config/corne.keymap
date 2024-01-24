@@ -16,11 +16,6 @@
     quick-tap-ms = <0>;
 };
 
-&mt {
-    tapping-term-ms = <160>;
-    quick-tap-ms = <0>;
-};
-
 / {
     mscros {
         screenshot: screenshot {
@@ -46,8 +41,6 @@
             label = "SPACETD";
             #binding-cells = <0>;
             bindings = <&lt 1 SPACE>, <&kp SPACE>;
-
-            tapping-term-ms = <160>;
         };
 
         enterTD: enterTD+lt {
@@ -55,8 +48,6 @@
             label = "ENTERTD";
             #binding-cells = <0>;
             bindings = <&lt 1 ENTER>, <&kp ENTER>;
-
-            tapping-term-ms = <160>;
         };
 
         BspcTD: BspcTD+shft {
@@ -64,8 +55,6 @@
             label = "BSPCTD";
             #binding-cells = <0>;
             bindings = <&mt RIGHT_SHIFT BACKSPACE>, <&kp BACKSPACE>;
-
-            tapping-term-ms = <160>;
         };
 
         delTD: delTD {
@@ -73,8 +62,6 @@
             label = "DELTD";
             #binding-cells = <0>;
             bindings = <&lt 2 DELETE>, <&kp DEL>;
-
-            tapping-term-ms = <160>;
         };
     };
 
