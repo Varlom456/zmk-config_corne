@@ -54,7 +54,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "ENTERTD";
             #binding-cells = <0>;
-            bindings = <&lt 1 ENTER>, <&none>;
+            bindings = <&lt 1 ENTER>, <&kp ENTER>;
 
             tapping-term-ms = <160>;
         };
