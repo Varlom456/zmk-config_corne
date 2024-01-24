@@ -8,6 +8,18 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+&mt {
+    tapping-term-ms = <175>;
+    bindings = <&kp>, <&kp>;
+
+    quick-tap-ms = <0.1>;
+};
+
+&lt {
+    tapping-term-ms = <175>;
+    quick-tap-ms = <0>;
+};
+
 / {
     mscros {
         goto_workspace_1: goto_workspace_1 {
