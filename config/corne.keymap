@@ -12,11 +12,11 @@
 #include <dt-bindings/zmk/keys.h>
 
 &lt {
-    tapping-term-ms = <150>;
+    tapping-term-ms = <100>;
     quick-tap-ms = <0>;
 };
 
-&mt { tapping-term-ms = <150>; };
+&mt { tapping-term-ms = <100>; };
 
 / {
     mscros {
@@ -44,7 +44,7 @@
             #binding-cells = <0>;
             bindings = <&lt 1 SPACE>, <&kp SPACE>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <100>;
         };
 
         enterTD: enterTD+lt {
@@ -53,7 +53,7 @@
             #binding-cells = <0>;
             bindings = <&lt 1 ENTER>, <&kp ENTER>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <100>;
         };
 
         BspcTD: BspcTD+shft {
@@ -62,7 +62,7 @@
             #binding-cells = <0>;
             bindings = <&mt RIGHT_SHIFT BACKSPACE>, <&kp BACKSPACE>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <100>;
         };
 
         delTD: delTD {
@@ -71,7 +71,7 @@
             #binding-cells = <0>;
             bindings = <&lt 2 DELETE>, <&kp DEL>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <100>;
         };
     };
 
